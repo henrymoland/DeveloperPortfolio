@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import Post from './components/Post';
+import CreatePost from './components/CreatePost';
 
 function App() {
   return (
@@ -12,8 +13,10 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/create" component={CreatePost} />
           <Route path="/contact" component={Contact} />
           <Route path="/:post_id" component={Post} />
+          
         </Switch>
       </div>
     </BrowserRouter>
