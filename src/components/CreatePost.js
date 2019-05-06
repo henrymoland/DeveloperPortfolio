@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { database } from '../Firebase';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+
 
 class Create extends Component {
     state = {
@@ -12,7 +15,7 @@ class Create extends Component {
 
     handleChange = (e) => {
         this.setState({
-            [e.target.name]: e.target.value
+            body: e
         });
     }
 
@@ -42,8 +45,6 @@ class Create extends Component {
             image: "",
             imageURL: ""
         })
-
-        console.log(this.state)
     }
 
     render() {
@@ -54,9 +55,9 @@ class Create extends Component {
                     <div className="col sm-6 col-sm-offset-3">
                         <form className="text-center border border-light p-5" style={{width: "80%"}} onSubmit={this.handleSubmit}>
                             <p className="h4 mb-4">Create a New Post</p>
-                            <input type="text" id="title" className="form-control mb-4" placeholder="Title" value={title} name="title" onChange={this.handleChange} />
+                            <input type="text" id="title" className="form-control mb-4" placeholder="Title" value={title} name="title" onChange={e => { this.setState({ title: e.target.value})}} />
 
-                            <textarea className="form-control rounded-0" id="text-body" rows="10" placeholder="What would you like to post?" value={body} name="body" onChange={this.handleChange}></textarea>
+                            <ReactQuill modules={Create.modules} formats={Create.formats} placeholder="What would you like to post?" value={body} name="body" onChange={this.handleChange} />
 
                             <div className="input-group mb-4 mt-4">
                             <div className="input-group-prepend">
@@ -78,5 +79,21 @@ class Create extends Component {
     }
 }
 
+Create.modules = {
+    toolbar: [
+        [{header: "1"}, { header: "2"}, { font: []}],
+        [{size: []}],
+        ["bold", "italic", "underline", "strike", "blockquote"],
+        [{"list": "ordered"}, {"list": "bullet"}],
+        ["link", "image", "video"],
+        ["clean"],
+        ["code-block"]
+    ]
+};
+
+Create.formats = [
+    "header", "font", "size", "bold", "italic", "underline", "strike", "blockquote", "list",
+    "bullet", "link", "image", "video", "code-block" , "clean"
+]
 
 export default Create;
