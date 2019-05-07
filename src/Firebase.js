@@ -14,4 +14,4 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
 
   export const database = firebase.database().ref('/posts');
-  export const storage = firebase.storage().ref('/images');
+  export const storage = firebase.storage();

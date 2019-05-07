@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { database } from '../Firebase';
 import _ from 'lodash';
 import renderHTML from 'react-render-html';
-
+import '../style.css';
 
 class Home extends Component {
     state = {
@@ -23,7 +23,7 @@ class Home extends Component {
             return (
                 <div className="post card" key="post.id" style={{marginBottom: 20,marginRight: "2%", width: "48%", border: "none"}}>
                     <Link to={"/" + post.id}>
-                        <img className="card-img-top" src="https://parall.ax/uploads/crop_image/1370/900/20131125154829_DSC_6244-Edit.jpg" alt="post"/>
+                        <img className="card-img-top" src={post.imageURL || "https://via.placeholder.com/75"} alt="post"/>
                     </Link>
                     <div className="card-body">
                         <Link to={"/" + post.id}>
