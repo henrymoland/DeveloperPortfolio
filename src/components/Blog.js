@@ -21,15 +21,13 @@ class Home extends Component {
     renderPost() {
         return _.map(this.state.posts, (post) => {
             return (
-                <div className="post card" key="post.id" style={{marginBottom: 20,marginRight: "2%", width: "48%", border: "none"}}>
+                <div className="post card" key="post.id" style={{marginBottom: 20, width: "80%", border: "none"}}>
                     <Link to={"/" + post.id}>
                         <img className="card-img-top" src={post.imageURL || "https://via.placeholder.com/75"} alt="post"/>
                     </Link>
                     <div className="card-body">
-                        <Link to={"/" + post.id}>
-                            <h2 className="card-title" style={{marginLeft: -16}}>{post.title}</h2>
-                        </Link>
-                        <p className="card-text" style={{marginLeft: -16}}>{renderHTML(post.body)}</p>
+                        <h1 className="card-title" style={{textAlign: "center"}}>{post.title}</h1>
+                        <p className="card-text" style={{marginLeft: -16, marginTop: 50}}>{renderHTML(post.body)}</p>
                     </div> 
                 </div>
             )
@@ -39,8 +37,8 @@ class Home extends Component {
     render() {
         return (
             <div className="container">
-                <h1 className="d-flex justify-content-center" style={{marginTop: 50, marginBottom: 30}}>Daily Blog Post on Web Development</h1>
-                <div className="post-list-container" style={{display: "flex", flexWrap: "wrap"}}>
+                <h1 className="d-flex justify-content-center display-4 heading-text" id="blog-heading" style={{marginTop: 50, marginBottom: 30}}>Daily Blog Post on Web Development</h1>
+                <div className="post-list" style={{display: "flex", flexDirection: "column"}}>
                     {this.renderPost()}
                 </div>
             </div>
