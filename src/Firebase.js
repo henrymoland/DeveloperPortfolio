@@ -1,6 +1,5 @@
 import * as firebase from 'firebase';
 
-
 var firebaseConfig = {
     apiKey: process.env.FIREBASE_API_KEY,
     authDomain: "developer-blog-195d8.firebaseapp.com",
