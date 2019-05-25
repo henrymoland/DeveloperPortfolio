@@ -1,28 +1,10 @@
 import React from 'react';
-import Projects from './Projects';
-import Contact from './Contact';
-import '../style.css';
 
-
-const Home = () => {
-        return (
-        <>
-            <div className="home-bg">
-                <div className="overlay">
-                    <div className="container overlay-container">
-                    
-                        <h1 className="display-3 heading-text center">Hi, I'm Henry. I design and build beautiful web applications</h1>
-                        <div className="btn-container">
-                            <button className="btn btn-outline-light btn-lg my-4">View My Work</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <section id="skills">
-                <div className= "container">
-                <div className="skills-wrapper">
-                    
+const Footer = () => {
+    return (
+        <section id="skills">
+            <div className= "container">
+                <div className="skills-wrapper"> 
                     <h3 className="section-heading">My skills and tools</h3>
 
                     <div className="card skills-card" style={{width: "18rem"}}>
@@ -97,23 +79,11 @@ const Home = () => {
                         </div>
                     </div>
 
-                    </div>
                 </div>
-             
-            </section>
+            </div>
+        </section>
 
-            
-            <Projects />
-            <Contact />
-            <section id="footer">
-                <div className="container">
-                    <div className="footer-wrapper">
-                        <p>Henry Moland @copy 2019</p>
-                    </div>
-                </div>
-            </section>
-        </>
-        )
-
+    )
 }
-export default Home;
+
+export default Footer;
