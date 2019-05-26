@@ -13,6 +13,21 @@ code {
     monospace;
 }
 
+/* === Navbar === */
+.navbar {
+  background-color: #010D00 !important;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #FFF !important;
+}
+
+.nav-item > .active {
+  border-bottom: 2px solid #FFF;
+  opacity: .7;
+}
+
+/* === ===== ==== */
 .home-bg {
   background: url(./img/home-bg.jpeg);
   background-size: cover;
@@ -51,6 +66,7 @@ code {
   height: 30vw;
   object-fit: cover;
 }
+
 .post-list {
   margin-left: 10%;
 }
@@ -63,6 +79,7 @@ code {
 }
 
 /* === About Section === */
+
 .about-wrapper {
   padding: 0px;
   color: #010D00;
@@ -80,6 +97,7 @@ code {
 .about-text {
   font-size: 1.2rem;
 }
+
 /* === Skills Section === */
 .skills-wrapper {
   padding: 50px;
