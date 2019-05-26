@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Footer = () => {
+const Header = () => {
     return (
         <div className="home-bg">
             <div className="overlay">
@@ -15,4 +15,4 @@ const Footer = () => {
     )
 }
 
-export default Footer;
+export default Header;

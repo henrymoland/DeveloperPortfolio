@@ -25,7 +25,7 @@ const Contact = () => {
 
                                     <div class="form-group">
                                         <label for="exampleFormControlTextarea1">Message</label>
-                                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Your message..."></textarea>
                                     </div>
                                     <div className="btn-container">
                                         <button className="btn btn-light btn-lg my-4 contact-button">Get In Touch </button>

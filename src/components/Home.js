@@ -1,117 +1,37 @@
 import React from 'react';
+import Header from './Header';
+import Skills from './Skills';
 import Projects from './Projects';
 import Contact from './Contact';
+import Footer from './Footer';
 import '../style.css';
+import aboutImg from '../img/about-img.jpg';
 
 
 const Home = () => {
         return (
         <>
-            <div className="home-bg">
-                <div className="overlay">
-                    <div className="container overlay-container">
-                    
-                        <h1 className="display-3 heading-text center">Hi, I'm Henry. I design and build beautiful web applications</h1>
-                        <div className="btn-container">
-                            <button className="btn btn-outline-light btn-lg my-4">View My Work</button>
+            <Header />
+            <section id="home">
+                <div className="container">
+                    <div className="about-wrapper">
+                        <h1 className="section-heading">About Me</h1>
+                        <div className="row">
+                        <div className ="col-md">
+                        <img src={ aboutImg} alt="..." className="img-fluid about-image" />             
                         </div>
+                        <div className ="col-md">
+                            <p className="about-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                            
+                    </div>
                     </div>
                 </div>
-            </div>
-            
-            <section id="skills">
-                <div className= "container">
-                <div className="skills-wrapper">
-                    
-                    <h3 className="section-heading">My skills and tools</h3>
-
-                    <div className="card skills-card" style={{width: "18rem"}}>
-                        <div className="card-body">
-                            <i className="fab fa-html5"></i>
-                            <h5 className="card-title">HTML5</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-
-                    <div className="card skills-card" style={{width: "18rem"}}>
-                        <div className="card-body">
-                            <i class="fab fa-js"></i>
-                            <h5 className="card-title">Javascript</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-
-                    <div className="card skills-card" style={{width: "18rem"}}>
-                        <div className="card-body">
-                            <i class="fab fa-css3"></i>
-                            <h5 className="card-title">CSS</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-
-                    <div className="card skills-card" style={{width: "18rem"}}>
-                        <div className="card-body">
-                            <i class="fab fa-react"></i>
-                            <h5 className="card-title">React</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-
-                    <div className="card skills-card" style={{width: "18rem"}}>
-                        <div className="card-body">
-                            <i className="fab fa-python"></i>
-                            <h5 className="card-title">Python</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-
-                    <div className="card skills-card" style={{width: "18rem"}}>
-                        <div className="card-body">
-                            <i class="fab fa-node"></i>
-                            <h5 className="card-title">Node</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-
-                    <div className="card skills-card" style={{width: "18rem"}}>
-                        <div className="card-body">
-                            <i class="fab fa-less"></i>
-                            <h5 className="card-title">Less</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-
-                    <div className="card skills-card" style={{width: "18rem"}}>
-                        <div className="card-body">
-                            <i class="fab fa-react"></i>
-                            <h5 className="card-title">React</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-
-                    <div className="card skills-card" style={{width: "18rem"}}>
-                        <div className="card-body">
-                            <i class="fab fa-react"></i>
-                            <h5 className="card-title">React</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-
-                    </div>
-                </div>
-             
             </section>
-
-            
+            <Skills />
             <Projects />
             <Contact />
-            <section id="footer">
-                <div className="container">
-                    <div className="footer-wrapper">
-                        <p>Henry Moland @copy 2019</p>
-                    </div>
-                </div>
-            </section>
+            <Footer />  
         </>
         )
 

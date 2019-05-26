@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 const Navbar = () => {
     return (
@@ -10,16 +10,39 @@ const Navbar = () => {
                 </Link>
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <Link to="/" className="nav-link">Home</Link>
+                        <Link activeClass="active" to="home" spy={true} smooth={true} offset={50} duration={500} className="nav-link">   
+                            Home
+                        </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/blog" className="nav-link">Blog</Link>
+                        <Link activeClass="active" to="about" spy={true} smooth={true} offset={50} duration={500} className="nav-link">   
+                            About
+                        </Link>
                     </li>
                     <li className="nav-item">
-                    <Link to="/contact" className="nav-link">Contact</Link>
+                        <Link activeClass="active" to="skills" spy={true} smooth={true} offset={50} duration={500} className="nav-link">   
+                            Skills
+                        </Link>
                     </li>
                     <li className="nav-item">
-                    <Link to="/create" className="nav-link">Create Post</Link>
+                        <Link activeClass="active" to="projects" spy={true} smooth={true} offset={50} duration={500} className="nav-link">   
+                            Projects
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link activeClass="active" to="blog" spy={true} smooth={true} offset={50} duration={500} className="nav-link">
+                            Blog
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500} className="nav-link"> 
+                            Contact
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link activeClass="active" to="create" spy={true} smooth={true} offset={50} duration={500} className="nav-link"> 
+                            Create Post
+                        </Link>
                     </li>
                 </ul>
             </div>

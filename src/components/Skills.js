@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Footer = () => {
+const Skills = () => {
     return (
         <section id="skills">
             <div className= "container">
@@ -82,8 +82,7 @@ const Footer = () => {
                 </div>
             </div>
         </section>
-
     )
 }
 
-export default Footer;
+export default Skills;
