@@ -3,11 +3,14 @@ import { Link } from 'react-scroll';
 
 const Navbar = () => {
     return (
-        <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light fixed">
+        <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light fixed hidden-phone">
             <div className="container">
                 <Link to="/">
                     <a className="navbar-brand" href="/" style={{color: "#FFF"}} ><i class="fas fa-laptop-code" style={{color: "#FFF"}}></i> Henry Moland</a>
                 </Link>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i className="fas fa-bars"></i>
+                </button>
                 <ul className="navbar-nav">
                     <li className="nav-item">
                         <Link activeClass="active" to="home" spy={true} smooth={true} offset={50} duration={1000} className="nav-link">   
@@ -32,16 +35,6 @@ const Navbar = () => {
                     <li className="nav-item">
                         <Link activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={1000} className="nav-link"> 
                             Contact
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link activeClass="active" to="blog" spy={true} smooth={true} offset={50} duration={1000} className="nav-link">
-                            Blog
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link activeClass="active" to="create" spy={true} smooth={true} offset={50} duration={1000} className="nav-link"> 
-                            Create Post
                         </Link>
                     </li>
                 </ul>

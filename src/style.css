@@ -14,6 +14,15 @@ code {
 }
 
 /* === Navbar === */
+.navbar-toggler {
+  border: transparent;
+}
+
+.fas {
+  color:white;
+  font-size: 2rem;
+}
+
 .navbar {
   background-color: #212529 !important;
 }
@@ -146,7 +155,7 @@ code {
 }
 
 .project-wrapper .box .hover-box {
-  background: rgb(39, 47, 97, .9);
+  background: rgb(39, 47, 97, .98);
   position: relative;
   bottom: -100%;
   height: 100%;
